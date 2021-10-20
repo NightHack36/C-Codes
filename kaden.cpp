@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+// this is a dp problem
 
 int kaden(vector <int>& A){
     int curr_sum = A[0] , max_sum = A[0];
@@ -16,4 +17,9 @@ int kaden(vector <int>& A){
         cout<< kaden(A) << "\n";
     
     }
+
+
+
+
+
     
