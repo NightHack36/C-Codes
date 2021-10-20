@@ -42,7 +42,7 @@ def speak(str):
 # import requests
 # r=requests.get("https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=f1957be72ff9411d96a5fbfedf8d54bd")
 # print(r.text)
-with open("text2.txt", encoding="utf8") as a:
+with open("text.txt", encoding="utf8") as a:
     str1 = a.read()
     speak(str1)
 
