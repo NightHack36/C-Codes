@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- App Description -->
+    <meta name="description" content="WeatherPlus">
+
+    <meta name="application-name" content="WeatherPlus">
+
+    <meta name="theme-color" content="#7127c0" />
+
+    <meta name="msapplication-TileColor" content="#7127c0">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#7127c0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+   
+    <!-- ios Support -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
+    <meta name="apple-mobile-web-app-title" content="WeatherPlus">
+
+    <meta name="apple-mobile-web-app-status-bar" content="#7127c0" />
+
+    <!-- font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <!-- Google Fonts CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Poppins:wght@600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- //Weather Icons CSS -->
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    
+    <!-- //Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>WeatherPlus - GADS Practice Project</title>
+</head>
+<body>
+
+    <div class="overlay">
+        <nav>
+            <!-- Search Location Section -->
+            <section class="weather__location__search">
+                <a id="location" >
+                    <h3 class="logo"> 
+                        <i class='wi wi-day-thunderstorm'></i>
+                        <span> Weather+</span>
+                    </h3>
+                </a>
+                <div class="search__container">
+                    <label for="search" aria-label="search city"></label>
+                    <input id='search' class="weather__search" name="search" type="search" placeholder="Search City" >
+                    <i class="fas fa-search-location search__icon"></i>
+                </div>
+            </section>
+        </nav>
+        
+        <main>
+            
+            <!-- Weather Preview Section (City, Country and Date information) -->
+            <section class="weather__preview">
+                
+            </section>
+    
+            <!-- Weather information -->
+            <div class="weather__today">
+                <section class="weather__description">
+                
+                </section>
+    
+                <section class="weather__details">
+                    <p>Welcome to Weather+ 😊, Please input a location for weather search</p> 
+    
+                    <p>You can search for your current location weather by clicking on the logo</p>
+    
+                    <p>Made with 💓 by <a href="https://github.com/Caspero-62" rel="noreferrer">Webdot</a></p>
+                </section>
+            </div>
+    
+            <!-- Weekly weather Forecast -->
+            <section class="future__weather__forecast">
+                   
+            </section>
+                
+    
+            <button class="install__button"  aria-label="install" hidden>install</button>
+        </main>
+    </div>
+
+    <div class="spinner-wrapper">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(() => {
+            setTimeout(() => {
+                //preloader
+                const hidePreloader = () => {
+                    let preloader = $('.spinner-wrapper');
+                    preloader.fadeOut(500);
+                }
+                hidePreloader();
+            }, 3000);   
+        });
+    </script>
+
+    <script src="scripts/index.js"></script>
+
+    <script>
+        // Register service worker.
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+                .then((reg) => {
+                console.log('Service worker registered.', reg);
+                });
+        });
+        }
+    </script>
+</body>
+</html>
