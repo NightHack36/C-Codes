@@ -32,7 +32,7 @@ int main() {
 
         default:
             // If the operator is other than +, -, * or /, error message is shown
-            cout << "Error! operator is not correct";
+            cout << "Error! operator is not correct Please try again";
             break;
     }
 
