@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class sortArray {
-
+//the code will replace elements of pairs in case the next element is smaller than previous
     public static void main(String[] args) {
         int n;
         Scanner in = new Scanner(System.in);
