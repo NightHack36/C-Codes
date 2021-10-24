@@ -1,0 +1,23 @@
+body {
+    background-image: linear-gradient(69deg, #bdc3c7, #2c3e50);
+}
+.container {
+    align-items: center;
+    text-align: center;
+}
+#dog-image {
+    height: 450px;
+    width: 400px;
+    border-radius: 10px;
+}
+button {
+    background-color: orangered;
+    color: white;
+    border-radius: 8px;
+}
+button:hover {
+    background-color: white;
+    color: orangered;
+    cursor: pointer;
+    transition: 0.3s;
+}
