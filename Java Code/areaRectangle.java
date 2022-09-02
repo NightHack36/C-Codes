@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class AreaOfRectangle {
+public class AreaOfRectangle {
    public static void main (String[] args)
    {
 	   Scanner scanner = new Scanner(System.in);
