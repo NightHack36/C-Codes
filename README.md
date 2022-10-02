@@ -76,7 +76,9 @@ I have created a simple page to display all contributors list [here](https://hct
 
 ## 🎯Objectives
 **The Main Objectives of this Repositry is to help People for their Contribution in Hacktoberfest 2021**
+Guys feel free to make your contribution to this repo.
 
+Thank you!!!
 ---
 ## 💡 Tech Stack Recommended
 <h3 align="left">Languages and Tools:</h3>
